@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Register - Library</title>
+</head>
+<body>
+    <h1>Create an Account</h1>
+
+    <% if (error) { %>
+        <p style="color:red"><%= error %></p>
+    <% } %>
+
+    <form method="POST" action="/register">
+        <p>
+            <label>Full name<br>
+                <input type="text" name="name" required>
+            </label>
+        </p>
+        <p>
+            <label>Username<br>
+                <input type="text" name="username" required>
+            </label>
+        </p>
+        <p>
+            <label>Password (min 6 characters)<br>
+                <input type="password" name="password" required minlength="6">
+            </label>
+        </p>
+        <button type="submit">Register</button>
+    </form>
+
+    <p>Already have an account? <a href="/login">Login</a></p>
+</body>
+</html>
